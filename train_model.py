@@ -6,7 +6,7 @@ import MeCab
 mecab = MeCab.Tagger("-Owakati")
 
 # CSVファイルからデータを読み込む
-csv_path = "kdb.csv"
+csv_path = "./source/kdb.csv"
 df = pd.read_csv(csv_path)
 
 # 日本語テキストを分かち書きしてタグ付け

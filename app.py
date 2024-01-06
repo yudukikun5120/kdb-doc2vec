@@ -8,7 +8,7 @@ from gensim.models.doc2vec import Doc2Vec
 model: Final[Doc2Vec] = Doc2Vec.load("kdb_2023.model")
 
 # シラバスデータを読み込む
-csv_path: Final[str] = "kdb.csv"
+csv_path: Final[str] = "./source/kdb.csv"
 df: pd.DataFrame = pd.read_csv(csv_path)
 
 st.title("KdB-Doc2Vec")
