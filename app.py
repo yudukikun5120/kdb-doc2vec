@@ -1,6 +1,5 @@
 from typing import Final
 import streamlit as st
-import gensim.downloader as api
 import pandas as pd
 from gensim.models.doc2vec import Doc2Vec
 
