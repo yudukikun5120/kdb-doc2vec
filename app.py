@@ -12,7 +12,7 @@ df: pd.DataFrame = pd.read_csv(csv_path)
 
 st.title("KdB-Doc2Vec")
 st.markdown(
-    "筑波大学のシラバスデータ（KdB）を用いて、科目概要を [Doc2Vec](https://radimrehurek.com/gensim/models/doc2vec.html) でベクトル化し、類似した科目を表示します。[kdb-parse](https://github.com/Mimori256/kdb-parse) の科目データを使用しています。科目データは2024年1月7日時点のものです。"
+    """筑波大学のシラバスデータ（KdB）を用いて、科目概要を [Doc2Vec](https://radimrehurek.com/gensim/models/doc2vec.html) でベクトル化し、類似した科目を表示します。[kdb-parse](https://github.com/Mimori256/kdb-parse) の科目データを使用しています。科目データは2024年1月7日時点のものです。[レポジトリ](https://github.com/yudukikun5120/kdb-doc2vec)。"""
 )
 
 st.header("科目番号を入力")
