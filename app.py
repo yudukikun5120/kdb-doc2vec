@@ -16,8 +16,19 @@ st.markdown(
 )
 
 st.header("科目番号を入力")
-st.write("入力された科目番号の科目概要と類似した科目を表示します。")
+st.markdown(
+    "入力された科目番号の科目概要と類似した科目を表示します。科目番号を [KdB](https://kdb.tsukuba.ac.jp/) で検索する。"
+)
 document_id: Final[str] = st.text_input("科目番号", "GC22201")
+
+course: pd.Series = df[df["科目番号"] == document_id].iloc[0]
+with st.container():
+    st.subheader(course["科目名"])
+    st.markdown(
+        "[KdB シラバス](https://kdb.tsukuba.ac.jp/syllabi/2023/{})。".format(document_id)
+    )
+    st.table(course[["科目番号", "授業方法", "単位数", "標準履修年次", "実施学期", "曜時限", "教室", "担当教員"]])
+
 
 st.header("似た科目")
 st.write("類似した科目を降順に表示しています。")
