@@ -25,7 +25,7 @@ course: pd.Series = df[df["科目番号"] == document_id].iloc[0]
 with st.container():
     st.subheader(course["科目名"])
     st.markdown(
-        "[KdB シラバス](https://kdb.tsukuba.ac.jp/syllabi/2023/{})。".format(document_id)
+        "[KdB シラバス](https://kdb.tsukuba.ac.jp/syllabi/2023/{}/jpn)。".format(document_id)
     )
     st.table(course[["科目番号", "授業方法", "単位数", "標準履修年次", "実施学期", "曜時限", "教室", "担当教員"]])
 
@@ -40,7 +40,7 @@ for similar_doc_id, similarity in similar_documents:
     with st.container():
         st.subheader(course["科目名"])
         st.markdown(
-            "類似度は {:.3f} です。また、[KdB シラバス](https://kdb.tsukuba.ac.jp/syllabi/2023/{})。".format(
+            "類似度は {:.3f} です。また、[KdB シラバス](https://kdb.tsukuba.ac.jp/syllabi/2023/{}/jpn)。".format(
                 similarity, similar_doc_id
             )
         )
