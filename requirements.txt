@@ -30,7 +30,7 @@ pytz==2023.3.post1
 referencing==0.32.1
 requests==2.31.0
 rich==13.7.0
-rpds-py==0.16.2
+rpds-py==2026.9.1
 scipy==1.11.4
 six==1.16.0
 smart-open==6.4.0
