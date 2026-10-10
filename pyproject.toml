@@ -1,0 +1,15 @@
+[project]
+name = "kdb-doc2vec"
+version = "0.1.0"
+description = "Show similar University of Tsukuba courses by vectorizing KdB syllabus summaries with Doc2Vec"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "gensim",
+    "mecab-python3",
+    "pandas",
+    "streamlit",
+]
+
+[tool.uv]
+package = false
